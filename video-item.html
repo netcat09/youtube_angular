@@ -1,0 +1,13 @@
+
+    <div class="col-md-4">
+        <img ng-src="{{ video.image }}">
+        <h2>{{ video.title | limitTo: 40 }}</h2>
+        <h2>{{ video.author }}</h2>
+        <i ng-show="video.e">E</i>
+        <strong>{{ video.views | number}}</strong>
+        <p>{{ video.description | limitTo: 150}}</p>
+        <p>{{ video.date | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+        <button class="btn">View</button>
+        <button ng-show="video.isFavorite" class="btn">Add to favorites</button>
+        <button ng-hide="video.isFavorite" class="btn">Delete</button>
+    </div>
